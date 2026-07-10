@@ -24,7 +24,7 @@ public class KafkaTopicConfig {
     }
 
     @Bean
-    public NewTopic kv6() {
-        return new NewTopic("ndov.kv6", 1, (short) 1);
+    public NewTopic TransportMessages() {
+        return new NewTopic("ndov.updates", 1, (short) 1);
     }
 }

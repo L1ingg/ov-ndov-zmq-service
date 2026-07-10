@@ -2,7 +2,7 @@ package com.ling.ovndovzmqservice;
 
 import java.util.Arrays;
 
-public enum OvMessageType {
+public enum MessageType {
     KV17CVLINFO("KV17cvlinfo"),
     KV15MESSAGES("KV15messages"),
     KV6POSINFO("KV6posinfo");
@@ -13,11 +13,11 @@ public enum OvMessageType {
         return value;
     }
 
-    OvMessageType(String value) {
+    MessageType(String value) {
         this.value = value;
     }
 
-    public static OvMessageType fromValue(String type) {
+    public static MessageType fromValue(String type) {
         return Arrays.stream(values())
                 .filter(t -> t.value.equals(type))
                 .findFirst()
